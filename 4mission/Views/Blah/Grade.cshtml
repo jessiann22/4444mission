@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<nav>
+    <a asp-controller="Blah" asp-action="Index">Home</a>
+    <a asp-controller="Blah" asp-action="Grade">Grade</a>
+</nav>
+
+<h2>Grade Calculator:</h2>
+<!-- grade calculator that takes inputs, then the javascript is going to add them together and spit out the total percentage.-->
+<form method="post">
+    <label for="assignments">Assignments (between 1 and 50):</label>
+    <input type="number" id="input1" min="1" max="50"><br />
+    <label for="groupproject">Group Project (between 1 and 10):</label>
+    <input type="number" id="input2" min="1" max="10"><br />
+    <label for="quizzes">Quizzes (between 1 and 10):</label>
+    <input type="number" id="input3" min="1" max="10"><br />
+    <label for="midterm">Midterm Exam (between 1 and 10):</label>
+    <input type="number" id="input4" min="1" max="10"><br />
+    <label for="final">Final Exam (between 1 and 10):</label>
+    <input type="number" id="input5" min="1" max="10"><br />
+    <label for="intex">INTEX (between 1 and 10):</label>
+    <input type="number" id="input6" min="1" max="10"><br />
+    <button type="submit" id="submit">Submit</button>
+    <span id="answers"></span>
+</form>
+<!--gotta link up the bootstrap, jquery and js links so the other parts of the website work.-->
+
+<script src="js/grade.js"></script>
