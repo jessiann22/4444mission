@@ -4,6 +4,8 @@
 @{
 }
 
+@model grademodel;
+
 <nav>
     <a asp-controller="Blah" asp-action="Index">Home</a>
     <a asp-controller="Blah" asp-action="Grade">Grade</a>
@@ -13,17 +15,17 @@
 <!-- grade calculator that takes inputs, then the javascript is going to add them together and spit out the total percentage.-->
 <form method="post">
     <label for="assignments">Assignments (between 1 and 50):</label>
-    <input type="number" id="input1" min="1" max="50"><br />
+    <input type="number" id="input1" asp-for="Assignment" min="1" max="50"><br />
     <label for="groupproject">Group Project (between 1 and 10):</label>
-    <input type="number" id="input2" min="1" max="10"><br />
+    <input type="number" id="input2" asp-for="Group"min="1" max="10"><br />
     <label for="quizzes">Quizzes (between 1 and 10):</label>
-    <input type="number" id="input3" min="1" max="10"><br />
+    <input type="number" id="input3"asp-for="Quiz" min="1" max="10"><br />
     <label for="midterm">Midterm Exam (between 1 and 10):</label>
-    <input type="number" id="input4" min="1" max="10"><br />
+    <input type="number" id="input4" asp-for="Midterm" min="1" max="10"><br />
     <label for="final">Final Exam (between 1 and 10):</label>
-    <input type="number" id="input5" min="1" max="10"><br />
+    <input type="number" id="input5" asp-for="Final" min="1" max="10"><br />
     <label for="intex">INTEX (between 1 and 10):</label>
-    <input type="number" id="input6" min="1" max="10"><br />
+    <input type="number" id="input6" asp-for="Intex" min="1" max="10"><br />
     <button type="submit" id="submit">Submit</button>
     <span id="answers"></span>
 </form>

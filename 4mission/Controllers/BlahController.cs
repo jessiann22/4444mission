@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using _4mission.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace _4mission.Controllers
         }
 
         [HttpPost]
-        public IActionResult Grade(object model)
+        public IActionResult Grade(grademodel model)
         {
             return View();
         }

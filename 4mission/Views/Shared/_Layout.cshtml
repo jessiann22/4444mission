@@ -4,7 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
      <meta charset="utf-8" />
-    <title>My very incredible website</title>
+    <title>@ViewData["Title"]</title>
     <!--Gotta add bootstrap at the top so it applies-->
     <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
@@ -16,8 +16,12 @@
 </head>
 <body>
 
+    <nav>
+        <a asp-controller="Blah" asp-action="Index">Home</a>
+        <a asp-controller="Blah" asp-action="Grade">Grade</a>
+    </nav>
 
-    
+
     <div>
         @RenderBody()
     </div>
